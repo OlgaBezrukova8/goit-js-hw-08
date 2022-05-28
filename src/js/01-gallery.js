@@ -1,10 +1,5 @@
 import Simplelightbox from 'simplelightbox';
 import 'simplelightbox/dist/simple-lightbox.min.css';
-// import templateFunction from './template.hbs';
-// document.body.innerHTML = templateFunction();
-
-// import GalleryTmpl from '../templates/gallery.hbs';
-// console.log(GalleryTmpl);
 
 // Add imports above this line
 import { galleryItems } from './gallery-items';
@@ -27,10 +22,6 @@ function createItemOfGallery() {
     })
     .join('');
 }
-
-// function createItemOfGallery() {
-//   return galleryItems.map(GalleryTmpl).join('');
-// }
 
 new SimpleLightbox('.gallery a', {
   captionDelay: 250,
