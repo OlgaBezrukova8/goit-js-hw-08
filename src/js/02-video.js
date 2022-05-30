@@ -5,4 +5,15 @@ const TIME_KEY = 'videoplayer-current-time';
 
 const test = data => localStorage.setItem(TIME_KEY, data.seconds);
 player.on('timeupdate', throttle(test, 1000));
-player.setCurrentTime(localStorage.getItem(TIME_KEY));
+player
+  .setCurrentTime(localStorage.getItem(TIME_KEY))
+  .then(function (seconds) {})
+  .catch(function (error) {
+    switch (error.name) {
+      case 'RangeError':
+        break;
+
+      default:
+        break;
+    }
+  });
